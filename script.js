@@ -17,3 +17,9 @@ function cambiarImagenSegunHora() {
 window.onload = cambiarImagenSegunHora;
 
 
+document.querySelector('a[href="#destino"]').addEventListener('click', function (e) {
+  e.preventDefault(); // Evita el comportamiento predeterminado
+  document.querySelector('#destino').scrollIntoView({
+    behavior: 'smooth' // Desplazamiento suave
+  });
+});
