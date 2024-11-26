@@ -1,0 +1,238 @@
+/* General */
+* {
+  text-decoration: none;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Futura LT', sans-serif;
+  background-color: #0e3104;
+  color: #333;
+  text-decoration: none;
+  max-width: 100%
+
+}
+
+@import url('https://fonts.cdnfonts.com/css/futura-lt');
+
+/* Imagen del header */
+.header-image {
+  width: 100%; /* La imagen sigue ocupando todo el ancho disponible */
+  max-height: 300px; /* Altura máxima controlada */
+  object-fit: cover; /* Recorta la imagen para que encaje sin deformarse */
+  object-position: bottom; /* Muestra la parte inferior de la imagen */
+  display: block; /* Asegura que no haya espacio extraño alrededor */
+  margin: 0; /* Elimina márgenes */
+}
+
+
+
+/* Header y menú */
+header {
+  background-color: #0a2402;
+  color: white;
+  padding: 0; /* Espaciado interno */
+  width: auto; /* Ajusta el ancho automáticamente según el contenido */
+  max-width: 1190px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el header horizontalmente */
+  border-bottom: 100px; /* Esquinas redondeadas opcionales */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  margin-bottom: 25px;
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #000000;
+  border-radius: 5px;
+  color: #ffffff;
+
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+
+
+
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-decoration: none;
+
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border: 5px solid;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 60px;
+
+
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #f0f0f0;
+  text-decoration: none;
+  
+
+}
+
+/* Colores específicos */
+.card.youtube {
+  background-color: #ff7a7a; /* Rojo (Youtube) */
+  color: #550000;
+  border: 5px solid;
+}
+
+.card.youtube:hover {
+  transform: rotate(5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+.card.discord {
+  background-color: #7f8aff; /* Azul (Discord) */
+  color: #1d268b;
+}
+.card.discord:hover {
+  transform: rotate(-5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+.card.guias {
+  background-color: #81ff9e; /* Verde */
+  color: #023f10;
+}
+.card.guias:hover {
+  transform: rotate(5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+.card.mods {
+  background-color: #ffc107; /* Amarillo */
+  color: black;
+}
+.card.mods:hover {
+  transform: rotate(-5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+.card.info {
+  background-color: #17a2b8; /* Azul claro */
+  color: white;
+}
+
+.card.info:hover {
+  transform: rotate(5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+.card.settings {
+  background-color: #6c757d; /* Gris */
+  color: white;
+}
+.card.settings:hover {
+  transform: rotate(-5deg); /* Rotación simple de 10 grados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
+}
+
+
+.player{
+  aspect-ratio: 16/9;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 25px;
+}
+
+
+
+footer {
+  justify-content: center; /* Centra el contenido del footer */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  background-color: #0a2402;
+  color: white;
+  padding: 20px 0; /* Espaciado superior e inferior */
+  padding-top: 40px;
+  width: auto; /* Ajusta el ancho automáticamente según el contenido */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el header horizontalmente */
+  border-top-left-radius: 20px; /* Esquinas redondeadas opcionales */
+  border-top-right-radius: 20px; /* Esquinas redondeadas opcionales */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+footer .footer-container {
+  max-width: 1200px; /* Limita el ancho máximo */
+  width: 100%; /* El contenedor debe ocupar todo el espacio posible hasta max-width */
+  justify-content: space-between; /* Espacio entre el texto e imagen */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto */
+  padding: 100px 20px; /* Añade algo de espacio a los lados */
+  display: flex;
+
+}
+
+footer .footer-text p {
+  font-size: 14px; /* Tamaño de fuente para los párrafos */
+  margin: 20px; /* Elimina el margen */
+}
+
+footer .footer-text a {
+  color: #f8d0a3; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+}
