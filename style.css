@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Futura LT', sans-serif;
+  font-family: 'Futura LT', 'TF2 Build', sans-serif;
   background-color: #0e3104;
   color: #333;
   text-decoration: none;
@@ -15,6 +15,8 @@ body {
 }
 
 @import url('https://fonts.cdnfonts.com/css/futura-lt');
+@import url('https://fonts.cdnfonts.com/css/tf2-build');
+
 
 /* Imagen del header */
 .header-image {
@@ -100,6 +102,8 @@ nav ul li a:hover {
   max-width: 1100px;
   margin: 0 auto;
   text-decoration: none;
+  font-family: 'TF2 Build', sans-serif;
+
 
 }
 
@@ -235,4 +239,15 @@ footer .footer-text p {
 footer .footer-text a {
   color: #f8d0a3; /* Color del enlace */
   text-decoration: none; /* Elimina el subrayado */
+}
+
+
+
+
+
+
+/* INFO, SETUP */
+
+.container-cons {
+  text-align: center;
 }
