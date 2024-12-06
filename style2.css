@@ -25,14 +25,14 @@
 body {
     font-family: 'Futura LT', 'TF2 Build', sans-serif;
     color: #fff;
-    background-color: #09282e;
+    background-color: #2e2e2e;
     text-decoration: none;
 
 }
 
 .parallax-image-container {
     position: relative;
-    height: 30vh; /* Altura visible de la imagen */
+    height: 20vh; /* Altura visible de la imagen */
     overflow: hidden; /* Oculta el resto de la imagen */
     z-index: -1; /* Capa inferior */
 }
@@ -50,7 +50,7 @@ body {
 
 /* Header y menú */
 header {
-    background-color: #010a0c;
+    background-color: rgb(31, 31, 31);
     color: white;
     padding: 0; /* Espaciado interno */
     width: auto; /* Ajusta el ancho automáticamente según el contenido */
@@ -161,39 +161,38 @@ header {
   .card:hover {
     background-color: #f0f0f0;
     text-decoration: none;
-    transform: scale(1.03); /* Aumenta el tamaño de la tarjeta en un 10% */
-    box-shadow: 0 4px 15px #b8b8b84d; /* Agrega una sombra cuando se pasa el mouse */
+    transform: scale(1.02); /* Aumenta el tamaño de la tarjeta en un 1% */
   
   }
   
   /* Colores específicos */
   .card.youtube {
-    background-color: #8d1c00; /* Rojo (Youtube) */
-    color: #ffb49d;
+    background-color: #0000004d; /* Rojo (Youtube) */
+    color: #ff4f23;
   }
   
   .card.discord {
-    background-color: #301e80; /* Azul (Discord) */
+    background-color: #0000004d; /* Azul (Discord) */
     color: #9e88ff;
   }
   
   .card.guias {
-    background-color: #095f1d; /* Verde */
+    background-color: #0000004d; /* Verde */
     color: #00ff3c;
   }
   
   .card.mods {
-    background-color: #926b00; /* Amarillo */
+    background-color: #0000004d; /* Amarillo */
     color:#ffc925;
   }
   
   .card.info {
-    background-color: #008599; /* Azul claro */
+    background-color: #0000004d; /* Azul claro */
     color: #5de9ff;
   }
   
   .card.settings {
-    background-color: #630747; /* Gris */
+    background-color: #0000004d; /* Gris */
     color: #f56bcb;
   }
 
@@ -204,3 +203,77 @@ header {
     max-width: 1200px;
     margin-bottom: 25px;
   }
+
+
+
+
+  
+  /* Contenedor principal */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin:  auto;
+  font-family: sans-serif;
+
+}
+
+
+/* Sección de introducción */
+.intro {
+  max-width: 600px;
+  margin: auto 0;
+
+}
+
+.intro p{
+  margin: auto 50px;
+
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin: 20px 50px;
+
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin: 20px 50px;
+
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.english-link {
+  margin-left: auto;
+}
+
+.donation-link {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
