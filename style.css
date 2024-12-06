@@ -1,98 +1,122 @@
-/* General */
-* {
-  text-decoration: none;
+@import url('https://fonts.cdnfonts.com/css/futura-lt');
+@import url('https://fonts.cdnfonts.com/css/tf2-build');
+@import url('https://fonts.cdnfonts.com/css/pricedown');
 
-}
-html {
-  scroll-behavior: smooth;
+* {
+    text-decoration: none;
+  
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+
+
+
+
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Futura LT', 'TF2 Build', sans-serif;
-  background-color: #0e3104;
-  color: #333;
-  text-decoration: none;
-  max-width: 100%;
-  height: 100vh;
+    font-family: 'Futura LT', 'TF2 Build', sans-serif;
+    color: #fff;
+    background-color: #2e2e2e;
+    text-decoration: none;
 
 }
 
-@import url('https://fonts.cdnfonts.com/css/futura-lt');
-@import url('https://fonts.cdnfonts.com/css/tf2-build');
-
-
-/* Imagen del header */
-.header-image {
-  width: 100%; /* La imagen sigue ocupando todo el ancho disponible */
-  max-height: 300px; /* Altura máxima controlada */
-  object-fit: cover; /* Recorta la imagen para que encaje sin deformarse */
-  object-position: bottom; /* Muestra la parte inferior de la imagen */
-  display: block; /* Asegura que no haya espacio extraño alrededor */
-  margin: 0; /* Elimina márgenes */
+.parallax-image-container {
+    position: relative;
+    height: 20vh; /* Altura visible de la imagen */
+    overflow: hidden; /* Oculta el resto de la imagen */
+    z-index: -1; /* Capa inferior */
 }
+
+.parallax-image-container img {
+    position: absolute;
+    top: 0; /* Coloca la imagen en el centro vertical */
+    left: 50%; /* Coloca la imagen en el centro horizontal */
+    transform: translate(-50%, -50%); /* Ajusta la imagen para que el centro sea el punto de referencia */
+    width: 100%; /* Mantiene las proporciones originales */
+}
+
 
 
 
 /* Header y menú */
 header {
-  background-color: #0a2402;
-  color: white;
-  padding: 0; /* Espaciado interno */
-  width: auto; /* Ajusta el ancho automáticamente según el contenido */
-  max-width: 1190px; /* Ancho máximo */
-  margin: 0 auto; /* Centra el header horizontalmente */
-  border-bottom: 100px; /* Esquinas redondeadas opcionales */
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
-  margin-bottom: 25px;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    padding: 0; /* Espaciado interno */
+    width: auto; /* Ajusta el ancho automáticamente según el contenido */
+    max-width: 100%; /* Ancho máximo */
+    margin: 0 auto; /* Centra el header horizontalmente */
+    border-bottom: 100px; /* Esquinas redondeadas opcionales */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
 
-}
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-}
+  
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    position: relative;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+  
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+  }
 
-nav ul li {
-  position: relative;
-  margin: 0 15px;
-}
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
 
-nav ul li a:hover {
-  background-color: #000000;
-  border-radius: 5px;
-  color: #ffffff;
 
-}
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  margin-top: 10px;
-  padding: 0;
-  list-style: none;
-}
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px;
-  white-space: nowrap;
-}
 
 
 
@@ -100,223 +124,156 @@ nav ul li a:hover {
 
 /* Grid */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-decoration: none;
-  font-family: 'TF2 Build', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    font-family: 'Pricedown Bl', 'Futura LT', 'TF2 Build', sans-serif;
 
-
-}
-
-.card {
-  background-color: #fff;
-  color: #333;
-  border: 5px solid;
-  text-align: center;
-  padding: 60px 30px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 60px;
-
-
-}
-
-.card a {
-  text-decoration: none;
-  color: inherit;
-
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background-color: #f0f0f0;
-  text-decoration: none;
   
+  
+  }
+  
+  .card {
+    background-color: #fff;
+    border:3px solid;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 60px;
 
-}
+  
+  
+  }
+  
+  .card a {
+    color: white;
+  
+  }
+  
+  .card:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+    transform: scale(1.02); /* Aumenta el tamaño de la tarjeta en un 1% */
+  
+  }
+  
+  /* Colores específicos */
+  .card.youtube {
+    background-color: #0000004d; /* Rojo (Youtube) */
+    color: #ff4f23;
+  }
+  
+  .card.discord {
+    background-color: #0000004d; /* Azul (Discord) */
+    color: #9e88ff;
+  }
+  
+  .card.guias {
+    background-color: #0000004d; /* Verde */
+    color: #00ff3c;
+  }
+  
+  .card.mods {
+    background-color: #0000004d; /* Amarillo */
+    color:#ffc925;
+  }
+  
+  .card.info {
+    background-color: #0000004d; /* Azul claro */
+    color: #5de9ff;
+  }
+  
+  .card.settings {
+    background-color: #0000004d; /* Gris */
+    color: #f56bcb;
+  }
 
-/* Colores específicos */
-.card.youtube {
-  background-color: #ff7a7a; /* Rojo (Youtube) */
-  color: #550000;
-  border: 5px solid;
-}
-
-.card.youtube:hover {
-  transform: rotate(5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
-
-.card.discord {
-  background-color: #7f8aff; /* Azul (Discord) */
-  color: #1d268b;
-}
-.card.discord:hover {
-  transform: rotate(-5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
-
-.card.guias {
-  background-color: #81ff9e; /* Verde */
-  color: #023f10;
-}
-.card.guias:hover {
-  transform: rotate(5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
-
-.card.mods {
-  background-color: #ffc107; /* Amarillo */
-  color: black;
-}
-.card.mods:hover {
-  transform: rotate(-5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
-
-.card.info {
-  background-color: #17a2b8; /* Azul claro */
-  color: white;
-}
-
-.card.info:hover {
-  transform: rotate(5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
-
-.card.settings {
-  background-color: #6c757d; /* Gris */
-  color: white;
-}
-.card.settings:hover {
-  transform: rotate(-5deg); /* Rotación simple de 10 grados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadir sombra para un toque adicional */
-}
+  
+  .player{
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 25px;
+  }
 
 
-.player{
-  aspect-ratio: 16/9;
-  width: 100%;
+
+
+  
+  /* Contenedor principal */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
   max-width: 1200px;
-  margin-bottom: 25px;
-}
-
-
-
-footer {
-  justify-content: center; /* Centra el contenido del footer */
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-  background-color: #0a2402;
-  color: white;
-  padding: 20px 0; /* Espaciado superior e inferior */
-  padding-top: 40px;
-  width: auto; /* Ajusta el ancho automáticamente según el contenido */
-  max-width: 1200px; /* Ancho máximo */
-  margin: 0 auto; /* Centra el header horizontalmente */
-  border-top-left-radius: 20px; /* Esquinas redondeadas opcionales */
-  border-top-right-radius: 20px; /* Esquinas redondeadas opcionales */
-
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
-}
-
-footer .footer-container {
-  max-width: 1200px; /* Limita el ancho máximo */
-  width: 100%; /* El contenedor debe ocupar todo el espacio posible hasta max-width */
-  justify-content: space-between; /* Espacio entre el texto e imagen */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto */
-  padding: 100px 20px; /* Añade algo de espacio a los lados */
-  display: flex;
+  margin:  auto;
+  font-family: sans-serif;
 
 }
 
-footer .footer-text p {
-  font-size: 14px; /* Tamaño de fuente para los párrafos */
-  margin: 20px; /* Elimina el margen */
+
+/* Sección de introducción */
+.intro {
+  max-width: 600px;
+  margin: auto 0;
+
 }
 
-footer .footer-text a {
-  color: #f8d0a3; /* Color del enlace */
-  text-decoration: none; /* Elimina el subrayado */
+.intro p{
+  margin: auto 50px;
+
 }
 
-
-
-
-
-
-/* INFO, SETUP */
-
-.container-cons {
-  text-align: center;
-}
-
-
-
-/* Aislar los estilos solo para la página de información */
-.info-page {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Estilo para ambas secciones dentro de .info-page */
-.info-page .section {
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
+.intro h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #d4f1ff;
-  text-align: center;
-  font-size: 25px;
+  margin: 20px 50px;
+
 }
 
-/* Estilo para el contenido dentro de cada sección */
-.info-page .content {
+.social-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin: 20px 50px;
+
 }
 
-/* Estilo para las imágenes */
-.info-page .image {
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.english-link {
+  margin-left: auto;
+}
+
+.donation-link {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+.image-section img {
   max-width: 100%;
   height: auto;
-  flex: 1;
-  margin: 0 20px;
 }
-
-/* Estilo para el texto */
-.info-page .text {
-  flex: 2;
-}
-
-/* Estilo para los íconos */
-.icon {
-  width: 50px; /* Ajusta el ancho de los íconos */
-  height: 50px; /* Ajusta la altura de los íconos */
-}
-
-
-
-/* Contenedor de íconos */
-.social-icons {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los íconos salten a la siguiente fila */
-  justify-content: center; /* Centra las filas horizontalmente */
-  gap: 20px; /* Espaciado entre los íconos */
-  max-width: 200px; /* Ajusta según el tamaño de los íconos para lograr 2 columnas */
-  margin: 0 auto; /* Centra el contenedor de íconos */
-}
-
